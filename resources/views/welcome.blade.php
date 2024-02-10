@@ -1,4 +1,4 @@
-<x-main pageTitle="Post It - Create Your Post Now">
+<x-layout pageTitle="Post It - Create Your Post Now">
     {{-- home section 1 banner --}}
     <section class="w-full h-full max-h-[1000px] relative ">
         {{-- background div with image --}}
@@ -18,4 +18,4 @@
             </div>
         </div>
     </section>
-</x-main>
+</x-layout>

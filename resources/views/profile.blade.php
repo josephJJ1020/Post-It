@@ -1,4 +1,4 @@
-<x-main :pageTitle='$title'>
+<x-layout :pageTitle='$title'>
     {{-- user details --}}
     <x-wrapper>
     <section id="profile-details">
@@ -25,4 +25,4 @@
         </x-sample> --}}
     </section>
     </x-wrapper>
-</x-main>
+</x-layout>
