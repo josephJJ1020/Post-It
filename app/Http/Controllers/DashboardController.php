@@ -15,7 +15,7 @@ class DashboardController extends Controller
     // return feed view
     public function feed()
     {
-        $posts = Post::all();
+        $posts = Post::all()->sortBy('id', null, true);
 
         // $posts = [["author_name" => "Anon1", "content" => "sample content 1"], ["author_name" => "Anon 2", "content" => "sample content 2"]];
 

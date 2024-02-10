@@ -1,8 +1,11 @@
 <x-layout pageTitle="Feed" :toast="$toast ?? null">
     <section id="feed-posts" class="w-full flex flex-col justify-start items-center bg-slate-100 h-full pt-6">
         {{-- create post form --}}
-        <form class="bg-slate-700 p-6 w-100 md:w-4/5 max-w-[800px] flex mb-6 rounded-lg shadow-lg flex-wrap gap-5">
-            <input type="text" class="w-4/5 bg-slate-200 text-black p-6 rounded-lg" placeholder="What's on your mind?"/>
+        <form method="POST" action="{{url('create-post')}}" class="bg-slate-700 p-6 w-100 md:w-4/5 max-w-[800px] flex mb-6 rounded-lg shadow-lg flex-wrap gap-5">
+
+            {{-- csrf (IMPORTANT! to avoid page expired) --}}
+            @csrf
+            <input type="text" class="w-4/5 bg-slate-200 text-black p-6 rounded-lg" placeholder="What's on your mind?" name="content"/>
             <button type="submit" class="text-white grow bg-slate-900 rounded-lg">Post It</button>
         </form>
 

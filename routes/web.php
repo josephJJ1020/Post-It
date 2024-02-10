@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Request;
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/feed', [DashboardController::class, 'feed']);
 Route::get('/profile', [ProfileController::class, 'index']);
+Route::post('/create-post', [PostController::class, 'index']);
 
 // Route::get('/{name?}', function ($name) {
 //     // return view('name', [$name]);
