@@ -7,8 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-### Post It
----
+# Post It
+--
 Sample PHP project. Create a post anonymously or with a profile.
 
 Bootstrapped with Laravel.
