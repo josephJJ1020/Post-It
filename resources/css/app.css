@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* input default */
+input:focus, input:active {
+    outline: none;
+    border: none;
+}
