@@ -8,7 +8,7 @@
 </p>
 
 # Post It
--
+--
 Sample PHP project. Create a post anonymously or with a profile.
 
 Bootstrapped with Laravel.
