@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Request;
 */
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get('/feed', [DashboardController::class, 'feed']);
 Route::get('/profile', [ProfileController::class, 'index']);
 
 // Route::get('/{name?}', function ($name) {

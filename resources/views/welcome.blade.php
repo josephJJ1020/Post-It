@@ -1,6 +1,6 @@
 <x-layout pageTitle="Post It - Create Your Post Now">
     {{-- home section 1 banner --}}
-    <section class="w-full h-full max-h-[1000px] relative text-black">
+    <section class="w-full h-full max-h-[1000px] relative text-slate-800">
         {{-- background div with image --}}
         <div class="absolute top-0 left-0 h-full w-full -z-10 bg-cover bg-right-bottom" style="background-image:url('/images/home-1.jpg')"></div>
         {{-- wrapper --}}
