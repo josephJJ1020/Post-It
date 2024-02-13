@@ -9,19 +9,19 @@
 
         {{-- nav links --}}
         <ul class="flex gap-5 font-bold">
-            <a href="/" class="hover:text-slate-400">
+            <a href="/" class="hover:text-slate-400 transition">
                 Home
             </a>
-            <a href="/feed" class="hover:text-slate-400">
+            <a href="/feed" class="hover:text-slate-400 transition">
                 Feed
             </a>
-            <a href="/profile" class="hover:text-slate-400">
+            <a href="/profile" class="hover:text-slate-400 transition">
                 Profile
             </a>
-            <a href="/login" class="hover:text-slate-400">
+            <a href="/login" class="hover:text-slate-400 transition">
                 Log In
             </a>
-            <a href="/register" class="hover:text-slate-400">
+            <a href="/register" class="hover:text-slate-400 transition">
                 Register
             </a>
 
