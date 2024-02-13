@@ -22,15 +22,18 @@ use Illuminate\Support\Facades\Request;
 Route::get('/profile', [ProfileController::class, 'index']);
 
 // Home
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 // Posts routes
 Route::get('/feed', [DashboardController::class, 'feed'])->name('feed');
 Route::post('/create-post', [PostController::class, 'index'])->name('createPost');
 
 // Authentication routes
-Route::get('/register', [AuthController::class, 'index']);
+Route::get('/register', [AuthController::class, 'index'])->name('registerPage');
 Route::post('/register', [AuthController::class, 'store'])->name('register');
+Route::get('/login', [AuthController::class, 'login'])->name('loginPage');
+Route::post('/login', [AuthController::class, 'authenticate'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Route::get('/{name?}', function ($name) {
 //     // return view('name', [$name]);

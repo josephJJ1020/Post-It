@@ -33,7 +33,47 @@ class AuthController extends Controller
         $user->username = $validated["username"];
         $user->password = Hash::make($validated["password"]);
 
+        $user->save();
+
+        // log in user
+        auth()->attempt($validated);
+        request()->session()->regenerate();
+
         // redirect to feed and show toast
-        return redirect()->route('feed')->with('toast', ['type' => 'success', 'message' =>'Welcome, '.$user->username.'!']);
+        return redirect()->route('feed')->with('toast', ['type' => 'success', 'message' => 'Welcome, ' . $user->username . '!']);
+    }
+
+    public function login()
+    {
+        return view('auth.login');
+    }
+
+    public function authenticate()
+    {
+        $validated = request()->validate([
+            'username' => "required|min:3|max:20",
+            'password' => 'required|min:8|max:25',
+        ]);
+
+        // if logged in successfully
+        if (auth()->attempt($validated)) {
+            // clear session and regenerate it
+            request()->session()->regenerate();
+
+            // redirect to feed
+            return redirect()->route('feed')->with('toast', ['type' => 'success', 'message' => 'Welcome back, ' . "" . "!"]);
+        }
+
+        return redirect()->route('loginPage')->withErrors(['username' => "No users found with username"]);
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect()->route('home')->with('toast', ['type' => 'success', 'message' => 'Logged out successfully']);
     }
 }

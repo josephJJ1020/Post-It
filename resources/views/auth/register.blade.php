@@ -42,8 +42,8 @@
 
             {{-- register button --}}
             <div class="w-full">
-                <button type="submit" class="btn rounded-sm bg-slate-700 text-white ml-2 font-bo">Register</button>
-                <span class="inline-block ml-3">Already have an account? <a href="" class="text-slate-700 font-bold">Log in</a></span>
+                <button type="submit" class="btn rounded-sm bg-slate-700 hover:bg-slate-600 transition text-white ml-2 font-bo">Register</button>
+                <span class="inline-block ml-3">Already have an account? <a href={{ route('loginPage') }} class="text-slate-700 font-bold hover:text-slate-600 transition">Log in</a></span>
             </div>
 
         </form>
