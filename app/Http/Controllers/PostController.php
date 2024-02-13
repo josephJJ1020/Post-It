@@ -10,6 +10,11 @@ class PostController extends Controller
     // anon posting only temporarily
     public function index(Request $request)
     {
+        // validate post length
+        request()->validate([
+            'content' => 'required|min:5|max:240'
+        ]);
+
         $content = $request->content;
 
         $randomNumber = null;
